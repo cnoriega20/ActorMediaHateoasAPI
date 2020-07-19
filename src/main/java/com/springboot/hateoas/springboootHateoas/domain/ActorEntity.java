@@ -1,5 +1,6 @@
 package com.springboot.hateoas.springboootHateoas.domain;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,9 +19,16 @@ public class ActorEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(notes = "Actor ID",name="id",required=true,value="test id")
     private Long id;
+
+    @ApiModelProperty(notes = "Actor first name",name="firstName",required=true,value="test name")
     private String firstName;
+
+    @ApiModelProperty(notes = "Actor last name",name="lastName",required=true,value="test last name")
     private String lastName;
+
+    @ApiModelProperty(notes = "Actor birth date",name="birthDate",required=true,value="test birthday")
     private String birthDate;
 
 
